@@ -16,15 +16,16 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Stefano Mangiola" /><meta name="description" content="We announce the new tidy and modular interface for a sccomp, which improves modularity, and clarity. The main change is the modularisation of sccomp in functions which can be linked with the pipe operator |&amp;gt;.
-Function Description Estimation: sccomp_stimate() which is usually run once in the analysis (per model). Testing: sccomp_test() which candy run multiple times, depending on how many contrasts you want to test (e.g. age, untreated vs treated)." /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="Stefano Mangiola" /><meta name="description" content=" We announce the new tidy and modular interface for a sccomp, which improves modularity, and clarity. The main change is the modularisation of sccomp in functions which can be linked with the pipe operator |&gt;.
+Function Description Estimation: sccomp_stimate() which is usually run once in the analysis (per model). Testing: sccomp_test() which candy run multiple times, depending on how many contrasts you want to test (e.g. age, untreated vs treated). Outlier removal: sccomp_remove_outliers() which is usually run once after sccomp_estimate() in case you want to produce estimates not influenced by outlier data points. Unwanted variation removal: sccomp_remove_unwanted_variation() which is run after sccomp_estimate() and produces a dataset that just preserve the variability of your factor of interest. Data replication: sccomp_replicate() which is run after sccomp_estimate() and produces a dataset representing the theoretical data distribution according to the model (from the posterior distribution). Plotting: plot() which is run after sccomp_test and outputs a series of summary plots. A reminder: what is sccomp sccomp1 is a statistical model developed for differential variability analysis in compositional data, primarily used in cellular omics fields like single-cell genomics, proteomics, and microbiomics (Mangiola et al. 2023). It addresses limitations of existing methods in differential abundance analysis by incorporating several advanced features. sccomp effectively models compositional count data properties, which were previously not adequately addressed, and tackles cell-group-specific differential variability. This model uses a constrained Beta-binomial distribution to enable more precise analyses. Key capabilities of sccomp include improved differential abundance analyses through cross-sample information borrowing, outlier identification and exclusion, realistic data simulation, and facilitating cross-study knowledge transfer. By incorporating these features, sccomp provides a more comprehensive and accurate framework for analyzing cellular omics data, identifying crucial biological drivers such as disease progression markers in cancer and pathogen infection.
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.115.4 with theme even" />
+<meta name="generator" content="Hugo 0.143.1 with theme even" />
 
 
 <link rel="canonical" href="https://tidyomics.github.io/tidyomicsBlog/post/2023-12-07-tidy-sccomp/" />
@@ -40,22 +41,27 @@ Function Description Estimation: sccomp_stimate() which is usually run once in t
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="The new tidy sccomp interface" />
-<meta property="og:description" content="We announce the new tidy and modular interface for a sccomp, which improves modularity, and clarity. The main change is the modularisation of sccomp in functions which can be linked with the pipe operator |&gt;.
-Function Description Estimation: sccomp_stimate() which is usually run once in the analysis (per model). Testing: sccomp_test() which candy run multiple times, depending on how many contrasts you want to test (e.g. age, untreated vs treated)." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://tidyomics.github.io/tidyomicsBlog/post/2023-12-07-tidy-sccomp/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2023-12-07T00:00:00+00:00" />
-<meta property="article:modified_time" content="2023-12-07T00:00:00+00:00" />
-<meta itemprop="name" content="The new tidy sccomp interface">
-<meta itemprop="description" content="We announce the new tidy and modular interface for a sccomp, which improves modularity, and clarity. The main change is the modularisation of sccomp in functions which can be linked with the pipe operator |&gt;.
-Function Description Estimation: sccomp_stimate() which is usually run once in the analysis (per model). Testing: sccomp_test() which candy run multiple times, depending on how many contrasts you want to test (e.g. age, untreated vs treated)."><meta itemprop="datePublished" content="2023-12-07T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2023-12-07T00:00:00+00:00" />
-<meta itemprop="wordCount" content="871">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="The new tidy sccomp interface"/>
-<meta name="twitter:description" content="We announce the new tidy and modular interface for a sccomp, which improves modularity, and clarity. The main change is the modularisation of sccomp in functions which can be linked with the pipe operator |&gt;.
-Function Description Estimation: sccomp_stimate() which is usually run once in the analysis (per model). Testing: sccomp_test() which candy run multiple times, depending on how many contrasts you want to test (e.g. age, untreated vs treated)."/>
+<meta property="og:url" content="https://tidyomics.github.io/tidyomicsBlog/post/2023-12-07-tidy-sccomp/">
+  <meta property="og:site_name" content="The Tidyomics Blog">
+  <meta property="og:title" content="The new tidy sccomp interface">
+  <meta property="og:description" content="We announce the new tidy and modular interface for a sccomp, which improves modularity, and clarity. The main change is the modularisation of sccomp in functions which can be linked with the pipe operator |&gt;.
+Function Description Estimation: sccomp_stimate() which is usually run once in the analysis (per model). Testing: sccomp_test() which candy run multiple times, depending on how many contrasts you want to test (e.g. age, untreated vs treated). Outlier removal: sccomp_remove_outliers() which is usually run once after sccomp_estimate() in case you want to produce estimates not influenced by outlier data points. Unwanted variation removal: sccomp_remove_unwanted_variation() which is run after sccomp_estimate() and produces a dataset that just preserve the variability of your factor of interest. Data replication: sccomp_replicate() which is run after sccomp_estimate() and produces a dataset representing the theoretical data distribution according to the model (from the posterior distribution). Plotting: plot() which is run after sccomp_test and outputs a series of summary plots. A reminder: what is sccomp sccomp1 is a statistical model developed for differential variability analysis in compositional data, primarily used in cellular omics fields like single-cell genomics, proteomics, and microbiomics (Mangiola et al. 2023). It addresses limitations of existing methods in differential abundance analysis by incorporating several advanced features. sccomp effectively models compositional count data properties, which were previously not adequately addressed, and tackles cell-group-specific differential variability. This model uses a constrained Beta-binomial distribution to enable more precise analyses. Key capabilities of sccomp include improved differential abundance analyses through cross-sample information borrowing, outlier identification and exclusion, realistic data simulation, and facilitating cross-study knowledge transfer. By incorporating these features, sccomp provides a more comprehensive and accurate framework for analyzing cellular omics data, identifying crucial biological drivers such as disease progression markers in cancer and pathogen infection.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2023-12-07T00:00:00+00:00">
+    <meta property="article:modified_time" content="2023-12-07T00:00:00+00:00">
+
+  <meta itemprop="name" content="The new tidy sccomp interface">
+  <meta itemprop="description" content="We announce the new tidy and modular interface for a sccomp, which improves modularity, and clarity. The main change is the modularisation of sccomp in functions which can be linked with the pipe operator |&gt;.
+Function Description Estimation: sccomp_stimate() which is usually run once in the analysis (per model). Testing: sccomp_test() which candy run multiple times, depending on how many contrasts you want to test (e.g. age, untreated vs treated). Outlier removal: sccomp_remove_outliers() which is usually run once after sccomp_estimate() in case you want to produce estimates not influenced by outlier data points. Unwanted variation removal: sccomp_remove_unwanted_variation() which is run after sccomp_estimate() and produces a dataset that just preserve the variability of your factor of interest. Data replication: sccomp_replicate() which is run after sccomp_estimate() and produces a dataset representing the theoretical data distribution according to the model (from the posterior distribution). Plotting: plot() which is run after sccomp_test and outputs a series of summary plots. A reminder: what is sccomp sccomp1 is a statistical model developed for differential variability analysis in compositional data, primarily used in cellular omics fields like single-cell genomics, proteomics, and microbiomics (Mangiola et al. 2023). It addresses limitations of existing methods in differential abundance analysis by incorporating several advanced features. sccomp effectively models compositional count data properties, which were previously not adequately addressed, and tackles cell-group-specific differential variability. This model uses a constrained Beta-binomial distribution to enable more precise analyses. Key capabilities of sccomp include improved differential abundance analyses through cross-sample information borrowing, outlier identification and exclusion, realistic data simulation, and facilitating cross-study knowledge transfer. By incorporating these features, sccomp provides a more comprehensive and accurate framework for analyzing cellular omics data, identifying crucial biological drivers such as disease progression markers in cancer and pathogen infection.">
+  <meta itemprop="datePublished" content="2023-12-07T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2023-12-07T00:00:00+00:00">
+  <meta itemprop="wordCount" content="871">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="The new tidy sccomp interface">
+  <meta name="twitter:description" content="We announce the new tidy and modular interface for a sccomp, which improves modularity, and clarity. The main change is the modularisation of sccomp in functions which can be linked with the pipe operator |&gt;.
+Function Description Estimation: sccomp_stimate() which is usually run once in the analysis (per model). Testing: sccomp_test() which candy run multiple times, depending on how many contrasts you want to test (e.g. age, untreated vs treated). Outlier removal: sccomp_remove_outliers() which is usually run once after sccomp_estimate() in case you want to produce estimates not influenced by outlier data points. Unwanted variation removal: sccomp_remove_unwanted_variation() which is run after sccomp_estimate() and produces a dataset that just preserve the variability of your factor of interest. Data replication: sccomp_replicate() which is run after sccomp_estimate() and produces a dataset representing the theoretical data distribution according to the model (from the posterior distribution). Plotting: plot() which is run after sccomp_test and outputs a series of summary plots. A reminder: what is sccomp sccomp1 is a statistical model developed for differential variability analysis in compositional data, primarily used in cellular omics fields like single-cell genomics, proteomics, and microbiomics (Mangiola et al. 2023). It addresses limitations of existing methods in differential abundance analysis by incorporating several advanced features. sccomp effectively models compositional count data properties, which were previously not adequately addressed, and tackles cell-group-specific differential variability. This model uses a constrained Beta-binomial distribution to enable more precise analyses. Key capabilities of sccomp include improved differential abundance analyses through cross-sample information borrowing, outlier identification and exclusion, realistic data simulation, and facilitating cross-study knowledge transfer. By incorporating these features, sccomp provides a more comprehensive and accurate framework for analyzing cellular omics data, identifying crucial biological drivers such as disease progression markers in cancer and pathogen infection.">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -86,8 +92,6 @@ Function Description Estimation: sccomp_stimate() which is usually run once in t
         <li class="mobile-menu-item">Archives</li>
       </a><a href="/tidyomicsBlog/tags/">
         <li class="mobile-menu-item">Tags</li>
-      </a><a href="/tidyomicsBlog/categories/">
-        <li class="mobile-menu-item">Categories</li>
       </a><a href="/tidyomicsBlog/about/">
         <li class="mobile-menu-item">About</li>
       </a>
@@ -116,8 +120,6 @@ Function Description Estimation: sccomp_stimate() which is usually run once in t
         <a class="menu-item-link" href="/tidyomicsBlog/post/">Archives</a>
       </li><li class="menu-item">
         <a class="menu-item-link" href="/tidyomicsBlog/tags/">Tags</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/tidyomicsBlog/categories/">Categories</a>
       </li><li class="menu-item">
         <a class="menu-item-link" href="/tidyomicsBlog/about/">About</a>
       </li>
@@ -373,6 +375,8 @@ outlier_free_estimate |&gt;
 
   
 
+  
+
       </div>
     </main>
 
@@ -381,7 +385,7 @@ outlier_free_estimate |&gt;
       <a href="mailto:mangiolastefano@gmail.com" class="iconfont icon-email" title="email"></a>
       <a href="https://github.com/stemangiola" class="iconfont icon-github" title="github"></a>
       <a href="https://twitter.com/steman_research" class="iconfont icon-twitter" title="twitter"></a>
-  <a href="https://tidyomics.github.io/tidyomicsBlog/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  <a href="https://tidyomics.github.io/tidyomicsBlog/post/2023-12-07-tidy-sccomp/" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
 </div>
 
 <div class="copyright">
@@ -399,7 +403,7 @@ outlier_free_estimate |&gt;
   <span class="copyright-year">
     &copy; 
     2017 - 
-    2024<span class="heart"><i class="iconfont icon-heart"></i></span><span>Stefano Mangiola, Maria Doyle</span>
+    2025<span class="heart"><i class="iconfont icon-heart"></i></span><span></span>
   </span>
 </div>
 
@@ -417,6 +421,7 @@ outlier_free_estimate |&gt;
 
 
 <script type="text/javascript" src="/tidyomicsBlog/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
+
 
 
 

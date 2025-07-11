@@ -208,7 +208,7 @@ pbmc_SCE %&gt;%
   ) %&gt;%
   select(signature_score, everything())</code></pre>
 <pre><code>## # A SingleCellExperiment-tibble abstraction: 80 x 22
-## [90m# Features=230 | Assays=counts, logcounts[39m
+<!-- ## [90m# Features=230 | Assays=counts, logcounts[39m -->
 ##    cell  signature_score orig.ident nCount_RNA nFeature_RNA RNA_snn_res.0.8
 ##    &lt;chr&gt;           &lt;dbl&gt; &lt;fct&gt;           &lt;dbl&gt;        &lt;int&gt; &lt;fct&gt;          
 ##  1 ATGC…          -0.128 SeuratPro…         70           47 0              
@@ -240,7 +240,7 @@ cell_subset = splits %&gt;%
 
 pbmc_SCE[, cell_subset]</code></pre>
 <pre><code>## # A SingleCellExperiment-tibble abstraction: 72 x 17
-## [90m# Features=230 | Assays=counts, logcounts[39m
+<!-- ## [90m# Features=230 | Assays=counts, logcounts[39m -->
 ##    cell  orig.ident nCount_RNA nFeature_RNA RNA_snn_res.0.8 letter.idents groups
 ##    &lt;chr&gt; &lt;fct&gt;           &lt;dbl&gt;        &lt;int&gt; &lt;fct&gt;           &lt;fct&gt;         &lt;chr&gt; 
 ##  1 ATTA… SeuratPro…        463           77 1               B             g1    
@@ -386,7 +386,7 @@ signature_score_1 - signature_score_2</code></pre>
   ) %&gt;%
   select(signature_score, everything())</code></pre>
 <pre><code>## # A Seurat-tibble abstraction: 80 x 24
-## [90m# Features=230 | Active assay=originalexp | Assays=originalexp[39m
+<!-- ## [90m# Features=230 | Active assay=originalexp | Assays=originalexp[39m -->
 ##    cell  signature_score orig.ident nCount_original… nFeature_origin… nCount_RNA
 ##    &lt;chr&gt;           &lt;dbl&gt; &lt;fct&gt;                 &lt;dbl&gt;            &lt;int&gt;      &lt;dbl&gt;
 ##  1 ATGC…          -0.128 SeuratPro…               70               47         70
@@ -419,7 +419,7 @@ cell_subset = splits %&gt;%
 
 pbmc_Seurat[, cell_subset]</code></pre>
 <pre><code>## # A Seurat-tibble abstraction: 72 x 19
-## [90m# Features=230 | Active assay=originalexp | Assays=originalexp[39m
+<!-- ## [90m# Features=230 | Active assay=originalexp | Assays=originalexp[39m -->
 ##    cell  orig.ident nCount_original… nFeature_origin… nCount_RNA nFeature_RNA
 ##    &lt;chr&gt; &lt;fct&gt;                 &lt;dbl&gt;            &lt;int&gt;      &lt;dbl&gt;        &lt;int&gt;
 ##  1 GCAG… SeuratPro…               72               45         72           45

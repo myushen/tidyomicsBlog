@@ -4,34 +4,23 @@
     <title>Posts on The Tidyomics Blog</title>
     <link>https://tidyomics.github.io/tidyomicsBlog/post/</link>
     <description>Recent content in Posts on The Tidyomics Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 07 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://tidyomics.github.io/tidyomicsBlog/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 07 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://tidyomics.github.io/tidyomicsBlog/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The new tidy sccomp interface</title>
       <link>https://tidyomics.github.io/tidyomicsBlog/post/2023-12-07-tidy-sccomp/</link>
       <pubDate>Thu, 07 Dec 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://tidyomics.github.io/tidyomicsBlog/post/2023-12-07-tidy-sccomp/</guid>
-      <description>We announce the new tidy and modular interface for a sccomp, which improves modularity, and clarity. The main change is the modularisation of sccomp in functions which can be linked with the pipe operator |&amp;gt;.
-Function Description Estimation: sccomp_stimate() which is usually run once in the analysis (per model). Testing: sccomp_test() which candy run multiple times, depending on how many contrasts you want to test (e.g. age, untreated vs treated).</description>
+      <description>&lt;!-- badges: start --&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.tidyverse.org/lifecycle/#maturing&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/lifecycle-maturing-blue.svg&#34; alt=&#34;Lifecycle:maturing&#34; /&gt;&lt;/a&gt; &lt;a href=&#34;https://github.com/stemangiola/tidyseurat/actions/&#34;&gt;&lt;img src=&#34;https://github.com/stemangiola/sccomp/actions/workflows/rworkflows.yml/badge.svg&#34; alt=&#34;R build status&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;!-- badges: end --&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/stemangiola/sccomp/master/inst/logo-01.png&#34; width=&#34;120&#34; /&gt;&lt;/p&gt;&#xA;&lt;p&gt;We announce the new tidy and modular interface for a &lt;code&gt;sccomp&lt;/code&gt;, which improves modularity, and clarity. The main change is the modularisation of &lt;code&gt;sccomp&lt;/code&gt; in functions which can be linked with the pipe operator &lt;code&gt;|&amp;gt;&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;table&gt;&#xA;&lt;thead&gt;&#xA;&lt;tr&gt;&#xA;&lt;th style=&#34;text-align:left;&#34;&gt;&#xA;Function&#xA;&lt;/th&gt;&#xA;&lt;th style=&#34;text-align:left;&#34;&gt;&#xA;Description&#xA;&lt;/th&gt;&#xA;&lt;/tr&gt;&#xA;&lt;/thead&gt;&#xA;&lt;tbody&gt;&#xA;&lt;tr&gt;&#xA;&lt;td style=&#34;text-align:left;&#34;&gt;&#xA;Estimation: &lt;code&gt;sccomp_stimate()&lt;/code&gt;&#xA;&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:left;&#34;&gt;&#xA;which is usually run once in the analysis (per model).&#xA;&lt;/td&gt;&#xA;&lt;/tr&gt;&#xA;&lt;tr&gt;&#xA;&lt;td style=&#34;text-align:left;&#34;&gt;&#xA;Testing: &lt;code&gt;sccomp_test()&lt;/code&gt;&#xA;&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:left;&#34;&gt;&#xA;which candy run multiple times, depending on how many contrasts you want to test (e.g. age, untreated vs treated).&#xA;&lt;/td&gt;&#xA;&lt;/tr&gt;&#xA;&lt;tr&gt;&#xA;&lt;td style=&#34;text-align:left;&#34;&gt;&#xA;Outlier removal: &lt;code&gt;sccomp_remove_outliers()&lt;/code&gt;&#xA;&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:left;&#34;&gt;&#xA;which is usually run once after &lt;code&gt;sccomp_estimate()&lt;/code&gt; in case you want to produce estimates not influenced by outlier data points.&#xA;&lt;/td&gt;&#xA;&lt;/tr&gt;&#xA;&lt;tr&gt;&#xA;&lt;td style=&#34;text-align:left;&#34;&gt;&#xA;Unwanted variation removal: &lt;code&gt;sccomp_remove_unwanted_variation()&lt;/code&gt;&#xA;&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:left;&#34;&gt;&#xA;which is run after &lt;code&gt;sccomp_estimate()&lt;/code&gt; and produces a dataset that just preserve the variability of your factor of interest.&#xA;&lt;/td&gt;&#xA;&lt;/tr&gt;&#xA;&lt;tr&gt;&#xA;&lt;td style=&#34;text-align:left;&#34;&gt;&#xA;Data replication: &lt;code&gt;sccomp_replicate()&lt;/code&gt;&#xA;&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:left;&#34;&gt;&#xA;which is run after &lt;code&gt;sccomp_estimate()&lt;/code&gt; and produces a dataset representing the theoretical data distribution according to the model (from the posterior distribution).&#xA;&lt;/td&gt;&#xA;&lt;/tr&gt;&#xA;&lt;tr&gt;&#xA;&lt;td style=&#34;text-align:left;&#34;&gt;&#xA;Plotting: &lt;code&gt;plot()&lt;/code&gt;&#xA;&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:left;&#34;&gt;&#xA;which is run after &lt;code&gt;sccomp_test&lt;/code&gt; and outputs a series of summary plots.&#xA;&lt;/td&gt;&#xA;&lt;/tr&gt;&#xA;&lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;div id=&#34;a-reminder-what-is-sccomp&#34; class=&#34;section level1&#34;&gt;&#xA;&lt;h1&gt;A reminder: what is &lt;code&gt;sccomp&lt;/code&gt;&lt;/h1&gt;&#xA;&lt;p&gt;&lt;code&gt;sccomp&lt;/code&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; is a statistical model developed for differential variability analysis in compositional data, primarily used in cellular omics fields like single-cell genomics, proteomics, and microbiomics (Mangiola et al. 2023). It addresses limitations of existing methods in differential abundance analysis by incorporating several advanced features. &lt;code&gt;sccomp&lt;/code&gt; effectively models compositional count data properties, which were previously not adequately addressed, and tackles cell-group-specific differential variability. This model uses a constrained Beta-binomial distribution to enable more precise analyses. Key capabilities of &lt;code&gt;sccomp&lt;/code&gt; include improved differential abundance analyses through cross-sample information borrowing, outlier identification and exclusion, realistic data simulation, and facilitating cross-study knowledge transfer. By incorporating these features, &lt;code&gt;sccomp&lt;/code&gt; provides a more comprehensive and accurate framework for analyzing cellular omics data, identifying crucial biological drivers such as disease progression markers in cancer and pathogen infection.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Tidy-transcriptomics manifesto</title>
       <link>https://tidyomics.github.io/tidyomicsBlog/post/2021-07-07-tidy-transcriptomics-manifesto/</link>
       <pubDate>Wed, 07 Jul 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://tidyomics.github.io/tidyomicsBlog/post/2021-07-07-tidy-transcriptomics-manifesto/</guid>
-      <description>
-&lt;script src=&#34;{{&lt; blogdown/postref &gt;}}index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-
-&lt;div id=&#34;TOC&#34;&gt;
-
-&lt;/div&gt;
-
-</description>
+      <description>&lt;script src=&#34;https://tidyomics.github.io/tidyomicsBlog/post/2021-07-07-tidy-transcriptomics-manifesto/index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;&#xA;&#xA;&lt;div id=&#34;TOC&#34;&gt;&#xA;&#xA;&lt;/div&gt;</description>
     </item>
-    
   </channel>
 </rss>
