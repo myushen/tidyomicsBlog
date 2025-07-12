@@ -20,7 +20,7 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.143.1'
+          hugo-version: '0.148.1'
           # extended: true
 
       - name: Build
@@ -28,10 +28,16 @@ jobs:
           cd blog
           hugo --minify
 
+      - name: Install xmllint
+        run: sudo apt-get update && sudo apt-get install -y libxml2-utils
+
+      - name: Validate RSS
+        run: xmllint blog/public/index.xml --noout
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         if: github.ref == 'refs/heads/master'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./blog/public
-          BRANCH: gh-pages # The branch the action should deploy to.
+          publish_branch: gh-pages # The branch the action should deploy to.

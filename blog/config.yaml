@@ -37,7 +37,7 @@ menu:
       weight: 30
 params:
   author:
-    name: Stefano Mangiola, Maria Doyle
+    name: Tidyomics Team
   archivePaginate: 50
   autoCollapseToc: no
   baiduAnalytics: ''
