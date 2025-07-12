@@ -12,12 +12,11 @@ pygmentsCodefences: yes
 pygmentsUseClasses: yes
 pygmentsCodefencesGuessSyntax: yes
 hasCJKLanguage: yes
-paginate: 5
+pagination:
+  pagerSize: 5
 disqusShortname: ''
 googleAnalytics: ''
 copyright: ''
-author:
-  name: Stefano Mangiola, Maria Doyle
 sitemap:
   changefreq: weekly
   filename: sitemap.xml
@@ -37,6 +36,8 @@ menu:
       url: /tags/
       weight: 30
 params:
+  author:
+    name: Stefano Mangiola, Maria Doyle
   archivePaginate: 50
   autoCollapseToc: no
   baiduAnalytics: ''

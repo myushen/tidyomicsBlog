@@ -16,14 +16,14 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Stefano Mangiola, Maria Doyle" /><meta name="description" content="The Tidyomics Blog" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="" /><meta name="description" content="The Tidyomics Blog" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.115.4 with theme even" />
+<meta name="generator" content="Hugo 0.143.1 with theme even" />
 
 
 <link rel="canonical" href="https://tidyomics.github.io/tidyomicsBlog/" />
@@ -41,14 +41,20 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="The Tidyomics Blog" />
-<meta property="og:description" content="The Tidyomics Blog" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://tidyomics.github.io/tidyomicsBlog/" />
-<meta itemprop="name" content="The Tidyomics Blog">
-<meta itemprop="description" content="The Tidyomics Blog"><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="The Tidyomics Blog"/>
-<meta name="twitter:description" content="The Tidyomics Blog"/>
+<meta property="og:url" content="https://tidyomics.github.io/tidyomicsBlog/">
+  <meta property="og:site_name" content="The Tidyomics Blog">
+  <meta property="og:title" content="The Tidyomics Blog">
+  <meta property="og:description" content="The Tidyomics Blog">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
+
+  <meta itemprop="name" content="The Tidyomics Blog">
+  <meta itemprop="description" content="The Tidyomics Blog">
+  <meta itemprop="datePublished" content="2023-12-07T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2023-12-07T00:00:00+00:00">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="The Tidyomics Blog">
+  <meta name="twitter:description" content="The Tidyomics Blog">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -79,8 +85,6 @@
         <li class="mobile-menu-item">Archives</li>
       </a><a href="/tidyomicsBlog/tags/">
         <li class="mobile-menu-item">Tags</li>
-      </a><a href="/tidyomicsBlog/categories/">
-        <li class="mobile-menu-item">Categories</li>
       </a><a href="/tidyomicsBlog/about/">
         <li class="mobile-menu-item">About</li>
       </a>
@@ -110,8 +114,6 @@
       </li><li class="menu-item">
         <a class="menu-item-link" href="/tidyomicsBlog/tags/">Tags</a>
       </li><li class="menu-item">
-        <a class="menu-item-link" href="/tidyomicsBlog/categories/">Categories</a>
-      </li><li class="menu-item">
         <a class="menu-item-link" href="/tidyomicsBlog/about/">About</a>
       </li>
   </ul>
@@ -134,8 +136,76 @@
   
   <div class="post-content">
     <div class="post-summary">
-      We announce the new tidy and modular interface for a sccomp, which improves modularity, and clarity. The main change is the modularisation of sccomp in functions which can be linked with the pipe operator |&gt;.
-Function Description Estimation: sccomp_stimate() which is usually run once in the analysis (per model). Testing: sccomp_test() which candy run multiple times, depending on how many contrasts you want to test (e.g. age, untreated vs treated).
+      <!-- badges: start -->
+<p><a href="https://www.tidyverse.org/lifecycle/#maturing"><img src="https://img.shields.io/badge/lifecycle-maturing-blue.svg" alt="Lifecycle:maturing" /></a> <a href="https://github.com/stemangiola/tidyseurat/actions/"><img src="https://github.com/stemangiola/sccomp/actions/workflows/rworkflows.yml/badge.svg" alt="R build status" /></a></p>
+<!-- badges: end -->
+<p><img src="https://raw.githubusercontent.com/stemangiola/sccomp/master/inst/logo-01.png" width="120" /></p>
+<p>We announce the new tidy and modular interface for a <code>sccomp</code>, which improves modularity, and clarity. The main change is the modularisation of <code>sccomp</code> in functions which can be linked with the pipe operator <code>|&gt;</code>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+Function
+</th>
+<th style="text-align:left;">
+Description
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Estimation: <code>sccomp_stimate()</code>
+</td>
+<td style="text-align:left;">
+which is usually run once in the analysis (per model).
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Testing: <code>sccomp_test()</code>
+</td>
+<td style="text-align:left;">
+which candy run multiple times, depending on how many contrasts you want to test (e.g. age, untreated vs treated).
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Outlier removal: <code>sccomp_remove_outliers()</code>
+</td>
+<td style="text-align:left;">
+which is usually run once after <code>sccomp_estimate()</code> in case you want to produce estimates not influenced by outlier data points.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Unwanted variation removal: <code>sccomp_remove_unwanted_variation()</code>
+</td>
+<td style="text-align:left;">
+which is run after <code>sccomp_estimate()</code> and produces a dataset that just preserve the variability of your factor of interest.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Data replication: <code>sccomp_replicate()</code>
+</td>
+<td style="text-align:left;">
+which is run after <code>sccomp_estimate()</code> and produces a dataset representing the theoretical data distribution according to the model (from the posterior distribution).
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Plotting: <code>plot()</code>
+</td>
+<td style="text-align:left;">
+which is run after <code>sccomp_test</code> and outputs a series of summary plots.
+</td>
+</tr>
+</tbody>
+</table>
+<div id="a-reminder-what-is-sccomp" class="section level1">
+<h1>A reminder: what is <code>sccomp</code></h1>
+<p><code>sccomp</code><a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> is a statistical model developed for differential variability analysis in compositional data, primarily used in cellular omics fields like single-cell genomics, proteomics, and microbiomics (Mangiola et al. 2023). It addresses limitations of existing methods in differential abundance analysis by incorporating several advanced features. <code>sccomp</code> effectively models compositional count data properties, which were previously not adequately addressed, and tackles cell-group-specific differential variability. This model uses a constrained Beta-binomial distribution to enable more precise analyses. Key capabilities of <code>sccomp</code> include improved differential abundance analyses through cross-sample information borrowing, outlier identification and exclusion, realistic data simulation, and facilitating cross-study knowledge transfer. By incorporating these features, <code>sccomp</code> provides a more comprehensive and accurate framework for analyzing cellular omics data, identifying crucial biological drivers such as disease progression markers in cancer and pathogen infection.</p>
     </div>
     <div class="read-more">
       <a href="/tidyomicsBlog/post/2023-12-07-tidy-sccomp/" class="read-more-link">Read more...</a>
@@ -156,14 +226,11 @@ Function Description Estimation: sccomp_stimate() which is usually run once in t
   
   <div class="post-content">
     <div class="post-summary">
-      
-<script src="{{< blogdown/postref >}}index.en_files/header-attrs/header-attrs.js"></script>
+      <script src="https://tidyomics.github.io/tidyomicsBlog/post/2021-07-07-tidy-transcriptomics-manifesto/index.en_files/header-attrs/header-attrs.js"></script>
 
 <div id="TOC">
 
 </div>
-
-
     </div>
     <div class="read-more">
       <a href="/tidyomicsBlog/post/2021-07-07-tidy-transcriptomics-manifesto/" class="read-more-link">Read more...</a>
@@ -188,7 +255,7 @@ Function Description Estimation: sccomp_stimate() which is usually run once in t
       <a href="mailto:mangiolastefano@gmail.com" class="iconfont icon-email" title="email"></a>
       <a href="https://github.com/stemangiola" class="iconfont icon-github" title="github"></a>
       <a href="https://twitter.com/steman_research" class="iconfont icon-twitter" title="twitter"></a>
-  <a href="https://tidyomics.github.io/tidyomicsBlog/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  <a href="https://tidyomics.github.io/tidyomicsBlog/" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
 </div>
 
 <div class="copyright">
@@ -206,7 +273,7 @@ Function Description Estimation: sccomp_stimate() which is usually run once in t
   <span class="copyright-year">
     &copy; 
     2017 - 
-    2024<span class="heart"><i class="iconfont icon-heart"></i></span><span>Stefano Mangiola, Maria Doyle</span>
+    2025<span class="heart"><i class="iconfont icon-heart"></i></span><span></span>
   </span>
 </div>
 
@@ -224,6 +291,7 @@ Function Description Estimation: sccomp_stimate() which is usually run once in t
 
 
 <script type="text/javascript" src="/tidyomicsBlog/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
+
 
 
 
