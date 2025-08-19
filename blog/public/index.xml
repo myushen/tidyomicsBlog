@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>The Tidyomics Blog</title>
-    <link>https://tidyomics.github.io/tidyomicsBlog/</link>
+    <link>https://myushen.github.io/tidyomicsBlog/</link>
     <description>Recent content on The Tidyomics Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 07 Dec 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://tidyomics.github.io/tidyomicsBlog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://myushen.github.io/tidyomicsBlog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
-      <link>https://tidyomics.github.io/tidyomicsBlog/about/</link>
+      <link>https://myushen.github.io/tidyomicsBlog/about/</link>
       <pubDate>Sun, 20 Aug 2017 21:38:52 +0800</pubDate>
-      <guid>https://tidyomics.github.io/tidyomicsBlog/about/</guid>
+      <guid>https://myushen.github.io/tidyomicsBlog/about/</guid>
       <description>&lt;p&gt;This is the blog of the tidyomics ecosystem. In it, we hope to share exciting updates on the development and use of our ecosystem.&lt;/p&gt;
 &lt;p&gt;You can find out more at our &lt;a href=&#34;https://github.com/tidyomics&#34;&gt;homepage&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;This blog is part of &lt;a href=&#34;https://www.r-bloggers.com&#34;&gt;R-Bloggers&lt;/a&gt;.&lt;/p&gt;
@@ -20,9 +20,9 @@
     </item>
     <item>
       <title>The new tidy sccomp interface</title>
-      <link>https://tidyomics.github.io/tidyomicsBlog/post/2023-12-07-tidy-sccomp/</link>
+      <link>https://myushen.github.io/tidyomicsBlog/post/2023-12-07-tidy-sccomp/</link>
       <pubDate>Thu, 07 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://tidyomics.github.io/tidyomicsBlog/post/2023-12-07-tidy-sccomp/</guid>
+      <guid>https://myushen.github.io/tidyomicsBlog/post/2023-12-07-tidy-sccomp/</guid>
       <description>
 
 
@@ -188,22 +188,22 @@ outlier_free_estimate |&amp;gt;
   plot()&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## $boxplot
 ## $boxplot[[1]]&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://tidyomics.github.io/tidyomicsBlog/post/2023-12-07-tidy-sccomp/index_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://myushen.github.io/tidyomicsBlog/post/2023-12-07-tidy-sccomp/index_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;## 
 ## 
 ## $credible_intervals_1D&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://tidyomics.github.io/tidyomicsBlog/post/2023-12-07-tidy-sccomp/index_files/figure-html/unnamed-chunk-7-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://myushen.github.io/tidyomicsBlog/post/2023-12-07-tidy-sccomp/index_files/figure-html/unnamed-chunk-7-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Now plotting the test against the continuous covariate&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;outlier_free_estimate |&amp;gt;
   sccomp_test(contrasts = &amp;quot;continuous_covariate&amp;quot;) |&amp;gt; 
   plot()&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## $boxplot
 ## $boxplot[[1]]&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://tidyomics.github.io/tidyomicsBlog/post/2023-12-07-tidy-sccomp/index_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://myushen.github.io/tidyomicsBlog/post/2023-12-07-tidy-sccomp/index_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;## 
 ## 
 ## $credible_intervals_1D&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://tidyomics.github.io/tidyomicsBlog/post/2023-12-07-tidy-sccomp/index_files/figure-html/unnamed-chunk-8-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://myushen.github.io/tidyomicsBlog/post/2023-12-07-tidy-sccomp/index_files/figure-html/unnamed-chunk-8-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;footnotes footnotes-end-of-document&#34;&gt;
 &lt;hr /&gt;
@@ -215,10 +215,10 @@ outlier_free_estimate |&amp;gt;
     </item>
     <item>
       <title>Tidy-transcriptomics manifesto</title>
-      <link>https://tidyomics.github.io/tidyomicsBlog/post/2021-07-07-tidy-transcriptomics-manifesto/</link>
+      <link>https://myushen.github.io/tidyomicsBlog/post/2021-07-07-tidy-transcriptomics-manifesto/</link>
       <pubDate>Wed, 07 Jul 2021 00:00:00 +0000</pubDate>
-      <guid>https://tidyomics.github.io/tidyomicsBlog/post/2021-07-07-tidy-transcriptomics-manifesto/</guid>
-      <description>&lt;script src=&#34;https://tidyomics.github.io/tidyomicsBlog/post/2021-07-07-tidy-transcriptomics-manifesto/index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+      <guid>https://myushen.github.io/tidyomicsBlog/post/2021-07-07-tidy-transcriptomics-manifesto/</guid>
+      <description>&lt;script src=&#34;https://myushen.github.io/tidyomicsBlog/post/2021-07-07-tidy-transcriptomics-manifesto/index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 
@@ -686,9 +686,9 @@ pbmc_Seurat[, cell_subset]&lt;/code&gt;&lt;/pre&gt;
     </item>
     <item>
       <title></title>
-      <link>https://tidyomics.github.io/tidyomicsBlog/post/2025-04-08-bioconductor-meets-brazil-a-one-day-immersion-in-rna-seq-with-tidybulk-and-carpentries/bioc_brazil_tidyomics_post/</link>
+      <link>https://myushen.github.io/tidyomicsBlog/post/2025-04-08-bioconductor-meets-brazil-a-one-day-immersion-in-rna-seq-with-tidybulk-and-carpentries/bioc_brazil_tidyomics_post/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://tidyomics.github.io/tidyomicsBlog/post/2025-04-08-bioconductor-meets-brazil-a-one-day-immersion-in-rna-seq-with-tidybulk-and-carpentries/bioc_brazil_tidyomics_post/</guid>
+      <guid>https://myushen.github.io/tidyomicsBlog/post/2025-04-08-bioconductor-meets-brazil-a-one-day-immersion-in-rna-seq-with-tidybulk-and-carpentries/bioc_brazil_tidyomics_post/</guid>
       <description>&lt;!DOCTYPE html&gt;
 
 &lt;html&gt;

@@ -28,7 +28,7 @@ Function Description Estimation: sccomp_stimate() which is usually run once in t
 <meta name="generator" content="Hugo 0.148.2 with theme even" />
 
 
-<link rel="canonical" href="https://tidyomics.github.io/tidyomicsBlog/post/2023-12-07-tidy-sccomp/" />
+<link rel="canonical" href="https://myushen.github.io/tidyomicsBlog/post/2023-12-07-tidy-sccomp/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/tidyomicsBlog/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/tidyomicsBlog/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/tidyomicsBlog/favicon-16x16.png">
@@ -41,7 +41,7 @@ Function Description Estimation: sccomp_stimate() which is usually run once in t
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:url" content="https://tidyomics.github.io/tidyomicsBlog/post/2023-12-07-tidy-sccomp/">
+<meta property="og:url" content="https://myushen.github.io/tidyomicsBlog/post/2023-12-07-tidy-sccomp/">
   <meta property="og:site_name" content="The Tidyomics Blog">
   <meta property="og:title" content="The new tidy sccomp interface">
   <meta property="og:description" content="We announce the new tidy and modular interface for a sccomp, which improves modularity, and clarity. The main change is the modularisation of sccomp in functions which can be linked with the pipe operator |&gt;.
@@ -315,22 +315,22 @@ outlier_free_estimate |&gt;
   plot()</code></pre>
 <pre><code>## $boxplot
 ## $boxplot[[1]]</code></pre>
-<p><img src="https://tidyomics.github.io/tidyomicsBlog/post/2023-12-07-tidy-sccomp/index_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p><img src="https://myushen.github.io/tidyomicsBlog/post/2023-12-07-tidy-sccomp/index_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
 <pre><code>## 
 ## 
 ## $credible_intervals_1D</code></pre>
-<p><img src="https://tidyomics.github.io/tidyomicsBlog/post/2023-12-07-tidy-sccomp/index_files/figure-html/unnamed-chunk-7-2.png" width="672" /></p>
+<p><img src="https://myushen.github.io/tidyomicsBlog/post/2023-12-07-tidy-sccomp/index_files/figure-html/unnamed-chunk-7-2.png" width="672" /></p>
 <p>Now plotting the test against the continuous covariate</p>
 <pre class="r"><code>outlier_free_estimate |&gt;
   sccomp_test(contrasts = &quot;continuous_covariate&quot;) |&gt; 
   plot()</code></pre>
 <pre><code>## $boxplot
 ## $boxplot[[1]]</code></pre>
-<p><img src="https://tidyomics.github.io/tidyomicsBlog/post/2023-12-07-tidy-sccomp/index_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p><img src="https://myushen.github.io/tidyomicsBlog/post/2023-12-07-tidy-sccomp/index_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
 <pre><code>## 
 ## 
 ## $credible_intervals_1D</code></pre>
-<p><img src="https://tidyomics.github.io/tidyomicsBlog/post/2023-12-07-tidy-sccomp/index_files/figure-html/unnamed-chunk-8-2.png" width="672" /></p>
+<p><img src="https://myushen.github.io/tidyomicsBlog/post/2023-12-07-tidy-sccomp/index_files/figure-html/unnamed-chunk-8-2.png" width="672" /></p>
 </div>
 <div class="footnotes footnotes-end-of-document">
 <hr />
@@ -385,7 +385,7 @@ outlier_free_estimate |&gt;
       <a href="mailto:mangiolastefano@gmail.com" class="iconfont icon-email" title="email"></a>
       <a href="https://github.com/stemangiola" class="iconfont icon-github" title="github"></a>
       <a href="https://twitter.com/steman_research" class="iconfont icon-twitter" title="twitter"></a>
-  <a href="https://tidyomics.github.io/tidyomicsBlog/post/2023-12-07-tidy-sccomp/" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  <a href="https://myushen.github.io/tidyomicsBlog/post/2023-12-07-tidy-sccomp/" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
 </div>
 
 <div class="copyright">
