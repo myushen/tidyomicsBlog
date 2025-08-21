@@ -631,7 +631,7 @@ sample_n(min_cells)&lt;/code>&lt;/pre>
 &lt;meta name="generator" content="pandoc" />
 &lt;meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 &lt;meta name="author" content="João Paulo P. de Almeida, Izabela Mamede &amp;amp; Carlos Augusto" />
-&lt;meta name="date" content="2025-08-19" />
+&lt;meta name="date" content="2025-08-21" />
 &lt;title>Bioconductor Meets Brazil: A One-Day Immersion in RNA-seq with tidybulk and Carpentries&lt;/title>
 &lt;script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc &lt; 2.8).
@@ -915,7 +915,7 @@ display: none;
 Immersion in RNA-seq with tidybulk and Carpentries&lt;/h1>
 &lt;h4 class="author">João Paulo P. de Almeida, Izabela Mamede &amp;amp; Carlos
 Augusto&lt;/h4>
-&lt;h4 class="date">2025-08-19&lt;/h4>
+&lt;h4 class="date">2025-08-21&lt;/h4>
 &lt;/div>
 &lt;p>We are thrilled to share that we recently organized the first
 Bioconductor (bioC-RNAseq) course in the state of Minas Gerais—one of
