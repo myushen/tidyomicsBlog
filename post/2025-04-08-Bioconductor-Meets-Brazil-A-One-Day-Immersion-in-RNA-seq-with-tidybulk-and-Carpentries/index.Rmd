@@ -34,7 +34,6 @@ We had a total of 58 participants coming from 8 different Brazilian states and o
 
 **Figure 1** - Map of Brazil showing the number of course participants per state.  
 <img src="figure1.png" width="50%" />
-![figure1.png]
 
 The audience ranged from university professors to undergraduate students across various life science disciplines, including health and agricultural sciences. No prior experience in R was required. Over **14k lines of code** were typed during the course, and our local server reached its **full CPU capacity** when all participants ran the `lfcShrink` function simultaneously!
 
