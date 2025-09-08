@@ -2,27 +2,75 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>The Tidyomics Blog</title>
-    <link>https://tidyomics.github.io/tidyomicsBlog/</link>
+    <link>https://myushen.github.io/tidyomicsBlog/</link>
     <description>Recent content on The Tidyomics Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 07 Dec 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://tidyomics.github.io/tidyomicsBlog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 08 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://myushen.github.io/tidyomicsBlog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
-      <link>https://tidyomics.github.io/tidyomicsBlog/about/</link>
+      <link>https://myushen.github.io/tidyomicsBlog/about/</link>
       <pubDate>Sun, 20 Aug 2017 21:38:52 +0800</pubDate>
-      <guid>https://tidyomics.github.io/tidyomicsBlog/about/</guid>
+      <guid>https://myushen.github.io/tidyomicsBlog/about/</guid>
       <description>&lt;p&gt;This is the blog of the tidyomics ecosystem. In it, we hope to share exciting updates on the development and use of our ecosystem.&lt;/p&gt;
 &lt;p&gt;You can find out more at our &lt;a href=&#34;https://github.com/tidyomics&#34;&gt;homepage&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;This blog is part of &lt;a href=&#34;https://www.r-bloggers.com&#34;&gt;R-Bloggers&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     <item>
+      <title>Bioconductor Meets Brazil: A One-Day Immersion in RNA-seq with tidybulk and Carpentries</title>
+      <link>https://myushen.github.io/tidyomicsBlog/post/2025-04-08-bioconductor-meets-brazil-a-one-day-immersion-in-rna-seq-with-tidybulk-and-carpentries/</link>
+      <pubDate>Mon, 08 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://myushen.github.io/tidyomicsBlog/post/2025-04-08-bioconductor-meets-brazil-a-one-day-immersion-in-rna-seq-with-tidybulk-and-carpentries/</guid>
+      <description>
+
+
+&lt;p&gt;We are thrilled to share that we recently organized the first Bioconductor (bioC-RNAseq) course in the state of Minas Gerais—one of the few such events ever held in Brazil.&lt;/p&gt;
+&lt;p&gt;The course took place at the Federal University of Minas Gerais (UFMG), supported by the graduate programs in Bioinformatics and in Biochemistry &amp;amp; Immunology. It was part of the 10-year anniversary edition of the Bioinformatics Summer Course.&lt;/p&gt;
+&lt;p&gt;Our experience in organizing this course builds upon insights from our publication, &lt;em&gt;“From In-Person to the Online World: Insights Into Organizing Events in Bioinformatics”&lt;/em&gt;. A key highlight was the collaboration between departments at Instituto de Ciências Biológicas (ICB) and Departamento de Ciência da Computação/Instituto de Ciências Exatas (DCC/ICEx), fostering interdisciplinary learning and research.&lt;/p&gt;
+&lt;div id=&#34;instructors&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Instructors&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Izabela Mamede&lt;/strong&gt;: MSc in Biochemistry and Immunology at UFMG. Bachelor’s in Biological Sciences from UFMG. Certified Carpentries instructor (&lt;a href=&#34;https://github.com/izabelamc&#34;&gt;GitHub&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;João Paulo P. de Almeida&lt;/strong&gt;: Postdoctoral researcher at the Institute of Biological Sciences and the Center for Artificial Intelligence Applied to Health, UFMG. PhD in Bioinformatics from UFMG and MSc in Biochemistry from the Ribeirão Preto Medical School, University of São Paulo (2018). (&lt;a href=&#34;https://github.com/jppalmeida&#34;&gt;GitHub&lt;/a&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;monitors&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Monitors&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Carlos A. da M. Machado&lt;/strong&gt; – Undergraduate student, Biological Sciences, UFMG.&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Victor A. Rogana&lt;/strong&gt; – Undergraduate student, Biological Sciences, UFMG.&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Bárbara Marinho&lt;/strong&gt; – Undergraduate student, Biomedical Sciences, UFMG.&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Clarisse R. Reis&lt;/strong&gt; – Master’s student, Graduate Program in Biochemistry and Immunology, UFMG.&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Henry P. G. Neto&lt;/strong&gt; – PhD student, Graduate Program in Genetics, UFMG.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;course-content&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Course Content&lt;/h2&gt;
+&lt;p&gt;In this course, we integrated the Carpentries bioC-RNAseq lesson with the tidyomics syntax, particularly &lt;a href=&#34;https://github.com/stemangiola/tidybulk&#34;&gt;&lt;code&gt;tidybulk&lt;/code&gt;&lt;/a&gt;. This intensive one-day event spanned eight hours and covered essential topics in RNA sequencing data analysis using R.&lt;/p&gt;
+&lt;p&gt;The course took place in an auditorium equipped with 120 Raspberry Pi 3 Model B+ computers. All participants had Wi-Fi access and a pre-configured connection to a local server with 300 GB of RAM and 24 CPUs, maintained by Professor Glória R. Franco’s group (UFMG). The server, which included all necessary packages for the course, was prepared with the support of Lucio Rezende Queiroz, a researcher at Weill Cornell Medicine. (&lt;a href=&#34;https://github.com/luciorezende&#34;&gt;GitHub&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;We had a total of 58 participants coming from 8 different Brazilian states and one from Peru (Figure 1). Our team of five monitors played a key role in troubleshooting small coding issues and keeping the course running smoothly in a large in-person classroom.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Figure 1&lt;/strong&gt; - Map of Brazil showing the number of course participants per state.&lt;br /&gt;
+&lt;img src=&#34;figure1.png&#34; width=&#34;50%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;The audience ranged from university professors to undergraduate students across various life science disciplines, including health and agricultural sciences. No prior experience in R was required. Over &lt;strong&gt;14k lines of code&lt;/strong&gt; were typed during the course, and our local server reached its &lt;strong&gt;full CPU capacity&lt;/strong&gt; when all participants ran the &lt;code&gt;lfcShrink&lt;/code&gt; function simultaneously!&lt;/p&gt;
+&lt;p&gt;The feedback was overwhelmingly positive, highlighting a clear demand for more courses like this. Many participants reached us via Instagram, requesting an online version. Given this strong interest, we plan to organize an online edition in the second semester of this year. Stay tuned!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Figure 2&lt;/strong&gt; - View of the Computational Lab Classroom at CAD3, UFMG, during the course.&lt;br /&gt;
+&lt;img src=&#34;figure2.jpg&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Figure 3&lt;/strong&gt; - Final group photo with students, monitors, and instructors.&lt;br /&gt;
+&lt;img src=&#34;figure3.jpg&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    <item>
       <title>The new tidy sccomp interface</title>
-      <link>https://tidyomics.github.io/tidyomicsBlog/post/2023-12-07-tidy-sccomp/</link>
+      <link>https://myushen.github.io/tidyomicsBlog/post/2023-12-07-tidy-sccomp/</link>
       <pubDate>Thu, 07 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://tidyomics.github.io/tidyomicsBlog/post/2023-12-07-tidy-sccomp/</guid>
+      <guid>https://myushen.github.io/tidyomicsBlog/post/2023-12-07-tidy-sccomp/</guid>
       <description>
 
 
@@ -188,22 +236,22 @@ outlier_free_estimate |&amp;gt;
   plot()&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## $boxplot
 ## $boxplot[[1]]&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://tidyomics.github.io/tidyomicsBlog/post/2023-12-07-tidy-sccomp/index_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://myushen.github.io/tidyomicsBlog/post/2023-12-07-tidy-sccomp/index_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;## 
 ## 
 ## $credible_intervals_1D&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://tidyomics.github.io/tidyomicsBlog/post/2023-12-07-tidy-sccomp/index_files/figure-html/unnamed-chunk-7-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://myushen.github.io/tidyomicsBlog/post/2023-12-07-tidy-sccomp/index_files/figure-html/unnamed-chunk-7-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Now plotting the test against the continuous covariate&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;outlier_free_estimate |&amp;gt;
   sccomp_test(contrasts = &amp;quot;continuous_covariate&amp;quot;) |&amp;gt; 
   plot()&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## $boxplot
 ## $boxplot[[1]]&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://tidyomics.github.io/tidyomicsBlog/post/2023-12-07-tidy-sccomp/index_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://myushen.github.io/tidyomicsBlog/post/2023-12-07-tidy-sccomp/index_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;## 
 ## 
 ## $credible_intervals_1D&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://tidyomics.github.io/tidyomicsBlog/post/2023-12-07-tidy-sccomp/index_files/figure-html/unnamed-chunk-8-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://myushen.github.io/tidyomicsBlog/post/2023-12-07-tidy-sccomp/index_files/figure-html/unnamed-chunk-8-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;footnotes footnotes-end-of-document&#34;&gt;
 &lt;hr /&gt;
@@ -215,20 +263,10 @@ outlier_free_estimate |&amp;gt;
     </item>
     <item>
       <title>Tidy-transcriptomics manifesto</title>
-      <link>https://tidyomics.github.io/tidyomicsBlog/post/2021-07-07-tidy-transcriptomics-manifesto/</link>
+      <link>https://myushen.github.io/tidyomicsBlog/post/2021-07-07-tidy-transcriptomics-manifesto/</link>
       <pubDate>Wed, 07 Jul 2021 00:00:00 +0000</pubDate>
-      <guid>https://tidyomics.github.io/tidyomicsBlog/post/2021-07-07-tidy-transcriptomics-manifesto/</guid>
-      <description>&lt;script src=&#34;https://tidyomics.github.io/tidyomicsBlog/post/2021-07-07-tidy-transcriptomics-manifesto/index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-
-&lt;div id=&#34;TOC&#34;&gt;
-
-&lt;/div&gt;
-
-
-
-
-
-&lt;pre&gt;&lt;code&gt;## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ──&lt;/code&gt;&lt;/pre&gt;
+      <guid>https://myushen.github.io/tidyomicsBlog/post/2021-07-07-tidy-transcriptomics-manifesto/</guid>
+      <description>&lt;pre&gt;&lt;code&gt;## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ──&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## ✓ ggplot2 3.3.5     ✓ purrr   0.3.4
 ## ✓ tibble  3.1.2     ✓ dplyr   1.0.7
 ## ✓ tidyr   1.1.3     ✓ stringr 1.4.0
@@ -682,7 +720,8 @@ pbmc_Seurat[, cell_subset]&lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;tidySummarizedExperiment and tidySingleCellEXeperiment&lt;/h3&gt;
 &lt;p&gt;You can use &lt;code&gt;tidyseurat&lt;/code&gt; citation as introduces the concepts of data abstraction.&lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description>
+&lt;/div&gt;
+</description>
     </item>
   </channel>
 </rss>

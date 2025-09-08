@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://tidyomics.github.io/tidyomicsBlog/sitemap.xml
+Sitemap: https://myushen.github.io/tidyomicsBlog/sitemap.xml
