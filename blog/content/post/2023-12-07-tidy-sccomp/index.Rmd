@@ -73,24 +73,17 @@ data("seurat_obj")
 
 The new framework
 
-```{r fit, warning=FALSE, message=FALSE, cache=TRUE}
+```{r fit, warning=FALSE, message=FALSE, cache=TRUE, results='hide'}
 
 outlier_free_estimate = 
   seurat_obj |>
   
   # Estimate
-  sccomp_estimate( 
-    formula_composition = ~ type + continuous_covariate, 
-    sample = "sample", 
-    cell_group = "cell_group", 
-    cores = 1,
-    verbose = FALSE
-  ) |> 
-  # sccomp_estimate( 
-  #   formula_composition = ~ type + continuous_covariate, 
-  #   .sample =  sample, 
-  #   .cell_group = cell_group
-  # ) |>
+  sccomp_estimate(
+    formula_composition = ~ type + continuous_covariate,
+    .sample =  sample,
+    .cell_group = cell_group
+  ) |>
   
   # Remove outliers
   sccomp_remove_outliers() 
