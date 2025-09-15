@@ -234,7 +234,7 @@ pbmc_SCE %&amp;gt;%
   ) %&amp;gt;%
   select(signature_score, everything())&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A SingleCellExperiment-tibble abstraction: 80 × 22
-## # [90mFeatures=230 | Cells=80 | Assays=counts, logcounts[0m
+## # Features=230 | Cells=80 | Assays=counts, logcounts
 ##    .cell      signature_score orig.ident nCount_RNA nFeature_RNA RNA_snn_res.0.8
 ##    &amp;lt;chr&amp;gt;                &amp;lt;dbl&amp;gt; &amp;lt;fct&amp;gt;           &amp;lt;dbl&amp;gt;        &amp;lt;int&amp;gt; &amp;lt;fct&amp;gt;          
 ##  1 ATGCCAGAA…          -0.128 SeuratPro…         70           47 0              
@@ -267,7 +267,7 @@ cell_subset = splits %&amp;gt;%
 
 pbmc_SCE[, cell_subset]&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A SingleCellExperiment-tibble abstraction: 72 × 17
-## # [90mFeatures=230 | Cells=72 | Assays=counts, logcounts[0m
+## # Features=230 | Cells=72 | Assays=counts, logcounts
 ##    .cell orig.ident nCount_RNA nFeature_RNA RNA_snn_res.0.8 letter.idents groups
 ##    &amp;lt;chr&amp;gt; &amp;lt;fct&amp;gt;           &amp;lt;dbl&amp;gt;        &amp;lt;int&amp;gt; &amp;lt;fct&amp;gt;           &amp;lt;fct&amp;gt;         &amp;lt;chr&amp;gt; 
 ##  1 GGTG… SeuratPro…        204           52 0               A             g1    
@@ -399,7 +399,7 @@ pbmc_Seurat %&amp;gt;%
   ) %&amp;gt;%
   select(signature_score, everything())&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A Seurat-tibble abstraction: 80 × 24
-## # [90mFeatures=230 | Cells=80 | Active assay=originalexp | Assays=originalexp[0m
+## # Features=230 | Cells=80 | Active assay=originalexp | Assays=originalexp
 ##    .cell      signature_score orig.ident nCount_originalexp nFeature_originalexp
 ##    &amp;lt;chr&amp;gt;                &amp;lt;dbl&amp;gt; &amp;lt;fct&amp;gt;                   &amp;lt;dbl&amp;gt;                &amp;lt;int&amp;gt;
 ##  1 ATGCCAGAA…          -0.128 SeuratPro…                 70                   47
@@ -433,7 +433,7 @@ cell_subset = splits %&amp;gt;%
 
 pbmc_Seurat[, cell_subset]&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A Seurat-tibble abstraction: 72 × 19
-## # [90mFeatures=230 | Cells=72 | Active assay=originalexp | Assays=originalexp[0m
+## # Features=230 | Cells=72 | Active assay=originalexp | Assays=originalexp
 ##    .cell          orig.ident  nCount_originalexp nFeature_originalexp nCount_RNA
 ##    &amp;lt;chr&amp;gt;          &amp;lt;fct&amp;gt;                    &amp;lt;dbl&amp;gt;                &amp;lt;int&amp;gt;      &amp;lt;dbl&amp;gt;
 ##  1 ATGCCAGAACGACT SeuratProj…                 70                   47         70
