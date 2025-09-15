@@ -1,11 +1,8 @@
 ---
 title: "The new tidy sccomp interface"
 author: "Stefano Mangiola"
-date: "2023-12-07"
+date: '2025-09-11'
 package: sccomp
-output:
-  BiocStyle::html_document:
-    toc_float: true
 vignette: >
   %\VignetteEngine{knitr::knitr}
   %\VignetteIndexEntry{Overview of the sccomp package}
@@ -81,9 +78,16 @@ outlier_free_estimate =
   # Estimate
   sccomp_estimate( 
     formula_composition = ~ type + continuous_covariate, 
-    .sample =  sample, 
-    .cell_group = cell_group
-  ) |>
+    sample = "sample", 
+    cell_group = "cell_group", 
+    cores = 1,
+    verbose = FALSE
+  ) |> 
+  # sccomp_estimate( 
+  #   formula_composition = ~ type + continuous_covariate, 
+  #   .sample =  sample, 
+  #   .cell_group = cell_group
+  # ) |>
   
   # Remove outliers
   sccomp_remove_outliers() 
@@ -125,7 +129,7 @@ outlier_free_estimate |>
 
 # Plotting
 
-The bloating functionalities have been improved. Now, both discrete and continuous variables can be visualised overlaying the to reticle data distribution from the model. This helps the user understanding whether the model is descriptively adequate to the data.
+The plotting functionalities have been improved. Now, both discrete and continuous variables can be visualised overlaying the  data distribution from the model. This helps the user understanding whether the model is descriptively adequate to the data.
 
 For example, if the theoretical data distribution from the `sccomp` does not overlap with the observed data distribution, this is an indication that the probability distribution used by `sccomp` is not suitable for the data or a different model (design matrix) should be used.
 

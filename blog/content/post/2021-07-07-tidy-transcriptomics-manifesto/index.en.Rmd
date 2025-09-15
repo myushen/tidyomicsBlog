@@ -1,7 +1,7 @@
 ---
 title: Tidy-transcriptomics manifesto
 author: Stefano & Maria
-date: '2021-07-07'
+date: '2025-09-11'
 slug: []
 categories:
   - all platforms
@@ -10,7 +10,7 @@ tags:
   - manifesto
   - transcriptomics
   - tidyverse
-lastmod: '2021-07-07T14:16:36+10:00'
+lastmod: '2025-09-11T15:54:22+1000'
 keywords: []
 description: ''
 comment: no
@@ -167,7 +167,8 @@ Calculating a transcriptional signature.
 
 ```{r}
 # Load data
-pbmc_SCE = tidySingleCellExperiment::pbmc_small
+data(pbmc_small, package="tidySingleCellExperiment")
+pbmc_SCE = pbmc_small
 
 signature_score_1 =
   pbmc_SCE[c("CD79A", "CD79B"),] %>%
@@ -188,7 +189,8 @@ signature_score_1 - signature_score_2
 
 ```{r}
 # Load data
-pbmc_SCE = tidySingleCellExperiment::pbmc_small
+data(pbmc_small, package="tidySingleCellExperiment")
+pbmc_SCE = pbmc_small
 
 pbmc_SCE %>%
   join_features(c("CD79A", "CD79B", "CD3D", "CCR7"), assay = "logcounts", shape = "wide") %>%
@@ -223,9 +225,8 @@ pbmc_SCE[, cell_subset]
 ```{r}
 pbmc_SCE %>%
   add_count(file  , name = "tot_cells") %>%
-  mutate(min_cells = min(tot_cells)) %>%
-  group_by(file  ) %>%
-  sample_n(min_cells)
+  group_by(file) %>%
+  sample_n(min(tot_cells))
 ```
 
 ## tidyseurat
@@ -242,7 +243,8 @@ Calculating a transcriptional signature.
 suppressPackageStartupMessages(library(Seurat))
 
 # Load data
-pbmc_Seurat = tidySingleCellExperiment::pbmc_small %>% as.Seurat() %>% NormalizeData()
+data(pbmc_small, package="tidySingleCellExperiment")
+pbmc_Seurat = pbmc_small %>% as.Seurat() %>% NormalizeData()
 
 signature_score_1 =
   pbmc_Seurat[c("CD79A", "CD79B"),] %>%
@@ -301,9 +303,8 @@ It is the same as for `tidySingleCellExperiment`
 ```{r}
 pbmc_Seurat %>%
   add_count(file  , name = "tot_cells") %>%
-  mutate(min_cells = min(tot_cells)) %>%
-  group_by(file  ) %>%
-  sample_n(min_cells)
+  group_by(file) %>%
+  sample_n(min(tot_cells))
 ```
 
 # Learning material
