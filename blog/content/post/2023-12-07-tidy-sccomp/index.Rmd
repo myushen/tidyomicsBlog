@@ -3,6 +3,9 @@ title: "The new tidy sccomp interface"
 author: "Stefano Mangiola"
 date: '2025-09-11'
 package: sccomp
+output:
+  BiocStyle::html_document:
+    toc_float: true
 vignette: >
   %\VignetteEngine{knitr::knitr}
   %\VignetteIndexEntry{Overview of the sccomp package}
